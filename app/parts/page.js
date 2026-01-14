@@ -2,55 +2,20 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const partCards = [
-  {
-    id: "monitor",
-    name: "Monitor",
-    price: "$150",
-    image:
-      "https://images.unsplash.com/photo-1587825140708-1b4252b82b2e?auto=format&fit=crop&w=400&q=80",
-    description: "24-inch Full HD display",
-  },
-  {
-    id: "mouse",
-    name: "Mouse",
-    price: "$25",
-    image:
-      "https://images.unsplash.com/photo-1598550561763-15717856a8c2?auto=format&fit=crop&w=400&q=80",
-    description: "Wireless optical mouse",
-  },
-  {
-    id: "keyboard",
-    name: "Keyboard",
-    price: "$45",
-    image:
-      "https://images.unsplash.com/photo-1593642634367-d91a135587b5?auto=format&fit=crop&w=400&q=80",
-    description: "Mechanical keyboard with RGB",
-  },
-  {
-    id: "cpu",
-    name: "CPU",
-    price: "$350",
-    image:
-      "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=400&q=80",
-    description: "Intel Core i7 Processor",
-  },
-  {
-    id: "ram",
-    name: "RAM",
-    price: "$70",
-    image:
-      "https://images.unsplash.com/photo-1598327097750-bf660af43b46?auto=format&fit=crop&w=400&q=80",
-    description: "16GB DDR4 RAM",
-  },
+  { id: "monitor", name: "Monitor", price: "$150", image: "monitor.jpg", description: "24-inch Full HD display" },
+  { id: "mouse", name: "Mouse", price: "$25", image: "mouse.jpg", description: "Wireless optical mouse" },
+  { id: "keyboard", name: "Keyboard", price: "$45", image: "keyboard.jpg", description: "Mechanical keyboard with RGB" },
+  { id: "cpu", name: "CPU", price: "$350", image: "cpu.jpg", description: "Intel Core i7 Processor" },
+  { id: "ram", name: "RAM", price: "$70", image: "ram.jpg", description: "16GB DDR4 RAM" },
 ];
 
 export default function PartsPage() {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Search functionality for top input
   const handleSearch = () => {
     const found = partCards.find(
       (part) => part.name.toLowerCase() === searchTerm.toLowerCase()
@@ -85,7 +50,7 @@ export default function PartsPage() {
             style={{
               marginLeft: "10px",
               padding: "8px 12px",
-              backgroundColor: "#538601",
+              backgroundColor: "#4b5f3f",
               color: "white",
               border: "none",
               borderRadius: "4px",
@@ -119,12 +84,14 @@ export default function PartsPage() {
                 textAlign: "center",
               }}
             >
-              <img
-                src={part.image}
+              <Image
+                src={`/images/${part.image}`}
                 alt={part.name}
+                width={400}
+                height={250}
                 style={{
                   width: "100%",
-                  height: "150px",
+                  height: "180px",
                   objectFit: "cover",
                   borderRadius: "8px",
                   marginBottom: "10px",
@@ -140,7 +107,7 @@ export default function PartsPage() {
                 style={{
                   marginTop: "10px",
                   padding: "8px 12px",
-                  backgroundColor: "#3b8608",
+                  backgroundColor: "#a71676",
                   color: "white",
                   border: "none",
                   borderRadius: "5px",
