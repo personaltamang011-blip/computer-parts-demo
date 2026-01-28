@@ -6,6 +6,7 @@ export default function HomePage() {
       <h1>Welcome to Sarmimani Computer Parts Demo</h1>
       <p>This is my first e-commerce design practice demo site. This is for practical purpose only..</p>
 
+
       <Link href="/parts">
         <button
           style={{
@@ -18,6 +19,24 @@ export default function HomePage() {
           }}
         >
           View Parts
+        </button>
+      </Link>
+      <br>
+      
+      </br>
+
+      <Link  href="https://computer-inventory-pwa-57sq.vercel.app/">
+        <button
+          style={{
+            marginTop: "20px",
+            padding: "10px 20px",
+            backgroundColor: "#648f00",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+          }}
+        >
+          computer-inventory
         </button>
       </Link>
     </main>
