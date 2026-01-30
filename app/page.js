@@ -39,6 +39,25 @@ export default function HomePage() {
           computer-inventory
         </button>
       </Link>
+
+       <br>
+      
+      </br>
+
+      <Link  href="https://comp-form-demo.vercel.app/">
+        <button
+          style={{
+            marginTop: "20px",
+            padding: "10px 20px",
+            backgroundColor: "#648f00",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+          }}
+        >
+          comp-form-demo
+        </button>
+      </Link>
     </main>
   );
 }
